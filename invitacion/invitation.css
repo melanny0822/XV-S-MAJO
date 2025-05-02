@@ -16,14 +16,16 @@ body {
 
 .invitacion {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 100px;
+    padding: 60px;
     border-radius: 20px;
+    width: 100%;
     max-width: 550px;
     text-align: center;
     position: relative;
-    margin-top: 50px;
+    margin: 50px 20px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 
 .corona {
     width: 150px;
@@ -158,31 +160,58 @@ body {
 
 /* Responsive para móviles */
 @media screen and (max-width: 480px) {
+    .invitacion {
+        padding: 30px;
+        margin: 30px 10px;
+    }
+
     .nombre {
-      font-size: 1.5rem;
+        font-size: 2.5rem;
     }
-  
+
     .frase {
-      font-size: 0.9rem;
+        font-size: 1rem;
     }
-  
+
+    .fecha {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .fecha .dia,
+    .fecha .mes {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+
     .fecha .numero {
-      font-size: 2rem;
+        font-size: 1.5rem;
     }
-  
-    .info > div {
-      flex: 1 1 100%;
+
+    .info {
+        flex-direction: column;
+        gap: 15px;
     }
-  
+
     .iconos {
-      gap: 10px;
+        flex-wrap: wrap;
+        gap: 15px;
     }
-  
+
     .icono {
-      width: 80px;
+        width: 60px;
     }
-  
+
     .quinceanera {
-      max-width: 100%;
+        max-width: 100%;
     }
-  }
+
+    .countdown-container {
+        max-width: 90%;
+        font-size: 1rem;
+    }
+
+    .corona {
+        width: 100px;
+    }
+}
