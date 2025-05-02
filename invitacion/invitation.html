@@ -24,7 +24,18 @@
         quince capullos de rosas, quince
         jazmines en flor y un ángel con su
         dulzura, quince años me
-        concedió."</p>
+        concedió."
+      </p>
+
+      <div class="countdown-container">
+        <h3>Faltan:</h3>
+        <div id="countdown">
+          <span id="days">00</span>d :
+          <span id="hours">00</span>h :
+          <span id="minutes">00</span>m :
+          <span id="seconds">00</span>s
+        </div>
+      </div>
 
       <div class="fecha">
         <span class="dia">VIERNES</span>
@@ -35,13 +46,13 @@
       <div class="info">
         <div class="recepcion">
           <h3>RECEPCIÓN</h3>
-          <p>London Garden Live Event<br>Hora: 6:30 pm</p>
+          <p>Zafiro - Mi Casa Campestre<br>Hora: 8:00 pm</p>
         </div>
         
         <div class="reservado">
           <h3>COLORES RESERVADOS</h3>
-          <p>Negro</p>
-          <p>Lila</p>
+          <p>Negro, Lila</p>
+          <p>Rojo, Rosado</p>
           <img src="../assets/reservado.png" alt="reservado" />
         </div>
 
@@ -51,6 +62,10 @@
           <img src="../assets/vestimenta.webp" alt="vestimenta" />
         </div>
       </div>
+
+      
+
+      <img src="../assets/quinceanera.png" alt="Quinceañera" class="quinceanera" />
 
       <div class="iconos">
         <a href="https://forms.gle/UiLtSe5SUr41y1nk6" target="_blank" class="icono">
@@ -69,24 +84,21 @@
         </div>
       </div>
 
-      <img src="../assets/quinceanera.png" alt="Quinceañera" class="quinceanera" />
     </div>
   </div>
 
-  <!-- Scripts -->
   <script>
-    // Activar música al entrar (si el navegador lo permite)
+    // Música
     document.addEventListener('DOMContentLoaded', function () {
       const audio = document.getElementById('musica');
       audio.play().catch(() => {
-        // Si el navegador bloquea el autoplay, permitir en el primer clic
         document.body.addEventListener('click', () => {
           audio.play();
         }, { once: true });
       });
     });
-
-    // Interacción visual con íconos (solo los que no tienen <a>)
+  
+    // Iconos
     document.querySelectorAll('.icono').forEach(icono => {
       if (!icono.closest('a')) {
         icono.addEventListener('click', () => {
@@ -94,7 +106,31 @@
         });
       }
     });
+  
+    // Cuenta regresiva
+    const countdown = () => {
+      const targetDate = new Date("June 20, 2025 20:00:00").getTime();
+      const now = new Date().getTime();
+      const timeLeft = targetDate - now;
+  
+      if (timeLeft > 0) {
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  
+        document.getElementById('days').textContent = String(days).padStart(2, '0');
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+      } else {
+        document.getElementById('countdown').innerHTML = "¡Es hoy! 🎉";
+      }
+    };
+  
+    setInterval(countdown, 1000);
   </script>
+  
 
 </body>
 </html>

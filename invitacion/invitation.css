@@ -88,6 +88,7 @@ body {
     display: flex;
     justify-content: space-around;
     margin-bottom: 30px;
+    margin-top: 40px ;
 }
 
 .icono {
@@ -135,3 +136,53 @@ body {
     height: auto;
     margin-top: 2px;
 }
+
+.countdown-container {
+    background-color: #fdf5e6;
+    padding: 15px;
+    border: 2px solid #c9a548;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 300px;
+    color: #6b4e16;
+    font-weight: bold;
+  }
+  
+  #countdown {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+
+/* Responsive para móviles */
+@media screen and (max-width: 480px) {
+    .nombre {
+      font-size: 1.5rem;
+    }
+  
+    .frase {
+      font-size: 0.9rem;
+    }
+  
+    .fecha .numero {
+      font-size: 2rem;
+    }
+  
+    .info > div {
+      flex: 1 1 100%;
+    }
+  
+    .iconos {
+      gap: 10px;
+    }
+  
+    .icono {
+      width: 80px;
+    }
+  
+    .quinceanera {
+      max-width: 100%;
+    }
+  }
