@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+    background: #999; /* fondo tipo sobre, puedes reemplazar por imagen */
+    font-family: sans-serif;
+  }
+  
+  .envelope {
+    background: linear-gradient(135deg, #aaa 49.5%, transparent 50.5%),
+                linear-gradient(225deg, #888 49.5%, transparent 50.5%);
+    background-color: #999;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .seal-container {
+    z-index: 10;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .seal-container:hover {
+    transform: scale(1.05);
+  }
+  
+  .seal {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  }
+  

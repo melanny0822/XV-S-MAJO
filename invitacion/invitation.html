@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invitación de XV Años</title>
+  <link rel="stylesheet" href="invitation.css">
+</head>
+<body>
+
+   <!-- Audio -->
+   <audio id="musica" autoplay loop>
+    <source src="../assets/veo-en-ti-la-luz.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <div class="invitacion-container">
+    <div class="invitacion">
+      <img src="../assets/corona1.png" alt="Corona" class="corona" />
+      <p class="mis-xv">Mis XV años</p>
+      <h1 class="nombre">Maria Jose Salazar</h1>
+      <p class="frase">"Quince estrellas bajaron del cielo,
+        trayéndome en su esplendor,
+        quince capullos de rosas, quince
+        jazmines en flor y un ángel con su
+        dulzura, quince años me
+        concedió."</p>
+
+      <div class="fecha">
+        <span class="dia">VIERNES</span>
+        <div class="numero">20</div>
+        <span class="mes">JUNIO</span>
+      </div>
+
+      <div class="info">
+        <div class="recepcion">
+          <h3>RECEPCIÓN</h3>
+          <p>London Garden Live Event<br>Hora: 6:30 pm</p>
+        </div>
+        
+        <div class="reservado">
+          <h3>COLORES RESERVADOS</h3>
+          <p>Negro</p>
+          <p>Lila</p>
+          <img src="../assets/reservado.png" alt="reservado" />
+        </div>
+
+        <div class="vestimenta">
+          <h3>VESTIMENTA</h3>
+          <p>Formal</p>
+          <img src="../assets/vestimenta.webp" alt="vestimenta" />
+        </div>
+      </div>
+
+      <div class="iconos">
+        <a href="https://forms.gle/UiLtSe5SUr41y1nk6" target="_blank" class="icono">
+          <img src="../assets/asistencia.png" alt="Asistencia" />
+          <p>Asistencia</p>
+        </a>
+        <div class="icono">
+          <a href="https://www.google.com/maps/place/XTRM+La+33/@6.2390941,-75.592049,3a,90y,170.13h,68.14t/data=!3m7!1e1!3m5!1sBY-8x3HoqK3olMTk4bN2tg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D21.85554084706159%26panoid%3DBY-8x3HoqK3olMTk4bN2tg%26yaw%3D170.13420866426776!7i16384!8i8192!4m16!1m9!3m8!1s0x8e4429a354a4ce5f:0x42d7560d7f109fa7!2zQXYuIDMzICM3NGItMTc1LCBNZWRlbGzDrW4sIEJlbMOpbiwgTWVkZWxsw61uLCBBbnRpb3F1aWE!3b1!8m2!3d6.238699!4d-75.5920587!10e5!16s%2Fg%2F11hz6tg9sg!3m5!1s0x8e44292e93444367:0x95b67c6aa7c8f410!8m2!3d6.2389359!4d-75.5920303!16s%2Fg%2F11h0bp_qcn?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="icono">
+            <img src="../assets/ubicacion.png" alt="Ubicación" />
+            <p>Ubicación</p>
+          </a>
+        </div>
+        <div class="icono">
+          <img src="../assets/regalo.png" alt="Regalo" />
+          <p>Lluvia de sobres</p>
+        </div>
+      </div>
+
+      <img src="../assets/quinceanera.png" alt="Quinceañera" class="quinceanera" />
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Activar música al entrar (si el navegador lo permite)
+    document.addEventListener('DOMContentLoaded', function () {
+      const audio = document.getElementById('musica');
+      audio.play().catch(() => {
+        // Si el navegador bloquea el autoplay, permitir en el primer clic
+        document.body.addEventListener('click', () => {
+          audio.play();
+        }, { once: true });
+      });
+    });
+
+    // Interacción visual con íconos (solo los que no tienen <a>)
+    document.querySelectorAll('.icono').forEach(icono => {
+      if (!icono.closest('a')) {
+        icono.addEventListener('click', () => {
+          icono.classList.toggle('activo');
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
