@@ -22,7 +22,7 @@ body {
     max-width: 550px;
     text-align: center;
     position: relative;
-    margin: 50px 20px;
+    margin: 50px 20px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -90,7 +90,7 @@ body {
     display: flex;
     justify-content: space-around;
     margin-bottom: 30px;
-    margin-top: 40px;
+    margin-top: 40px ;
 }
 
 .icono {
@@ -124,7 +124,7 @@ body {
     width: 100%;
     max-width: 280px;
     margin-top: -10px;
-
+   
 }
 
 .vestimenta img {
@@ -140,29 +140,23 @@ body {
 }
 
 .countdown-container {
+    background-color: #fdf5e6;
+    padding: 15px;
+    border: 2px solid #c9a548;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 280px;
+    color: #6b4e16;
+    font-weight: bold;
+  }
+  
+  #countdown {
+    font-size: 1.5rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    color: #4d3b1f;
-}
-
-.countdown-item {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-}
-
-.colon {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #4d3b1f;
-}
-
-
+    gap: 5px;
+  }
+  
 
 /* Responsive para móviles */
 @media screen and (max-width: 480px) {
