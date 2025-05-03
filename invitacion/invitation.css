@@ -145,9 +145,10 @@ body {
     border: 2px solid #c9a548;
     border-radius: 10px;
     margin: 20px auto;
-    max-width: 280px;
+    max-width: 240px;
     color: #6b4e16;
     font-weight: bold;
+    max-height: 240px;
   }
   
   #countdown {
